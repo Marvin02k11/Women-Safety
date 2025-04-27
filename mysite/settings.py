@@ -129,6 +129,8 @@ else:
 
 MEDIA_ROOT = BASE_DIR / "main_app" / "media"
 
+MIDDLEWARE.insert(1, 'whitenoise.middleware.WhiteNoiseMiddleware')
+
 
 # SMTP Configuration
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
